@@ -10,9 +10,11 @@ namespace CSD3354_week_04
     {
         static void Main(string[] args)
         {
-            //countryside c = new countryside();
-            //c.run();
-            (new learningexp()).run();
+
+            countryside c = new countryside();
+            c.run();
+            c.travel();
+
 
         }
     }
@@ -44,7 +46,7 @@ namespace CSD3354_week_04
             c = toronto;
             Console.WriteLine(c.villagename);
 
-        
+            Console.ReadKey();
 
         }
     }
@@ -63,6 +65,23 @@ namespace CSD3354_week_04
 
         }
 
+        public void travel()
+        {
+            village currentvillage = toronto;
+
+            while (!currentvillage.isAstrildeHere)
+            {
+                if (currentvillage.isAstrildeHere)
+                    Console.WriteLine("you found astridle in" + currentvillage);
+                else
+                    currentvillage = currentvillage.nextvillage;
+            }
+
+        }
+
     }
 
 }
+
+
+
