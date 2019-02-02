@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace CSD3354_week_04
 {
-   
-class Program
+    class Program
     {
         static void Main(string[] args)
         {
-
+            //countryside c = new countryside();
+            //c.run();
+            (new learningexp()).run();
 
         }
     }
@@ -24,7 +25,29 @@ class Program
 
 
     }
+    class learningexp
+    {
+        public void run()
+        {
+            village toronto;
+            toronto = new village();
+            village a, b, c;
+            toronto.villagename = "version a";
+            a = toronto;
+            Console.WriteLine(a.villagename);
+            toronto = new village();
+            toronto.villagename = "version b";
+            b = toronto;
+            Console.WriteLine(b.villagename);
+            toronto = new village();
+            toronto.villagename = "version c";
+            c = toronto;
+            Console.WriteLine(c.villagename);
 
+        
+
+        }
+    }
 
     class countryside
     {
@@ -41,7 +64,5 @@ class Program
         }
 
     }
-
-
 
 }
